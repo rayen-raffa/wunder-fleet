@@ -28,10 +28,11 @@ jobs:
       - name: install dependencies
         run: npm ci
 
-      - name: build application
+      - name: run unit tests
         run: npx jest
 
   build-and-deploy:
+    needs: unit-tests
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
