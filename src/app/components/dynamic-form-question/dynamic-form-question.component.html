@@ -1,16 +1,20 @@
 <div [formGroup]="form">
-  <label [attr.for]="question.key">{{ question.label }}</label>
+    <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label [attr.for]="question.key" color="accent">{{ question.label }}</mat-label>
 
   <div [ngSwitch]="question.controlType">
-    <input
-      *ngSwitchCase="'textbox'"
-      [formControlName]="question.key"
-      [id]="question.key"
-      [type]="question.type"
-    />
+      <input
+        *ngSwitchCase="'textbox'"
+        [formControlName]="question.key"
+        [id]="question.key"
+        [type]="question.type"
+        [placeholder]="question.placeholder"
+        matInput
+      />
   </div>
 
-  <div class="errorMessage" *ngIf="!isValid">
+  <mat-error *ngIf="!isValid">
     {{ question.label }} is required
-  </div>
+  </mat-error>
+</mat-form-field>
 </div>

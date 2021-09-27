@@ -9,10 +9,17 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 import { DynamicFormQuestionComponent } from './components/dynamic-form-question/dynamic-form-question.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
-  declarations: [AppComponent, ToolbarComponent, DynamicFormQuestionComponent],
+  declarations: [
+    AppComponent,
+    ToolbarComponent,
+    DynamicFormQuestionComponent,
+    RegisterComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -20,6 +27,7 @@ import { DynamicFormQuestionComponent } from './components/dynamic-form-question
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],

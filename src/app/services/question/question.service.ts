@@ -15,21 +15,21 @@ export class QuestionService {
       new TextboxQuestion({
         key: 'firstName',
         label: 'First name',
-        value: 'Rayen',
+        placeholder: 'Rayen',
         required: true,
         order: 1
       }),
       new TextboxQuestion({
         key: 'lastName',
         label: 'Last name',
-        value: 'RAFFA',
+        placeholder: 'RAFFA',
         required: true,
         order: 2
       }),
       new TextboxQuestion({
         key: 'telephone',
         label: 'Telephone',
-        value: '+216 27 085 029',
+        placeholder: '+216 27 085 029',
         required: true,
         order: 3
       })
