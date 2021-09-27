@@ -9,9 +9,10 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { DynamicFormQuestionComponent } from './components/dynamic-form-question/dynamic-form-question.component';
 
 @NgModule({
-  declarations: [AppComponent, ToolbarComponent],
+  declarations: [AppComponent, ToolbarComponent, DynamicFormQuestionComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
