@@ -58,8 +58,52 @@ export const initialRegistrationQuestionsState: IRegistrationQuestions = {
       order: 3,
     }),
   ],
-  address: [],
-  paymentInfo: [],
+  address: [
+    new TextboxQuestion({
+      key: 'street',
+      label: 'Street',
+      placeholder: 'Damascus Street',
+      required: true,
+      order: 1,
+    }),
+    new TextboxQuestion({
+      key: 'houseNumber',
+      label: 'House Number',
+      placeholder: '16',
+      required: true,
+      order: 2,
+    }),
+    new TextboxQuestion({
+      key: 'zipCode',
+      label: 'Zip Code',
+      placeholder: '2111',
+      required: true,
+      order: 3,
+    }),
+    new TextboxQuestion({
+      key: 'city',
+      label: 'City',
+      placeholder: 'Gafse',
+      required: true,
+      order: 4,
+    }),
+  ],
+  paymentInfo: [
+    new TextboxQuestion({
+      key: 'accountOwner',
+      label: 'Account Owner',
+      placeholder: 'Rayen RAFFA',
+      required: true,
+      order: 1,
+    }),
+    new TextboxQuestion({
+      key: 'iban',
+      label: 'IBAN',
+      placeholder: 'IBAN 00216 27 085 029',
+      required: true,
+      order: 2,
+    }),
+  ],
 };
 
 export const initialRegisterState: IRegisterState = {
