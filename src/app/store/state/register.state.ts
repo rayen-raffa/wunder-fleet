@@ -39,7 +39,7 @@ export const initialRegistrationQuestionsState: IRegistrationQuestions = {
     paymentInfo: []
 }
 
-export const inititalRegisterState: IRegisterState = {
+export const initialRegisterState: IRegisterState = {
     currentRegistrationStep: 'Not Started',
     personalInfo: initialPersonalInfoState,
     address: initialAddressState,

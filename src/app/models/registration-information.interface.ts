@@ -7,7 +7,7 @@ export interface IPersonalInformation {
 export interface IAddress {
     street: string,
     houseNumber: string,
-    zipCode: number,
+    zipCode: string,
     city: string
 }
 
