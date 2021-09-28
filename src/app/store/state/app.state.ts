@@ -6,12 +6,10 @@ import { IRegisrationInformation } from "src/app/models/registration-information
 export interface IAppState {
     router?: RouterReducerState,
     registerState: IRegisterState
-    registeredUsers: IRegisrationInformation[]
 }
 
 export const initialAppState: IAppState = {
     registerState: initialRegisterState,
-    registeredUsers: []
 }
 
 export function getInitialState(): IAppState {
