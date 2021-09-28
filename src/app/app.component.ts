@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { QuestionService } from './services/question/question.service';
-import { QuestionBase } from './utils/question-base';
+import { QuestionBase } from './models/question-base';
 
 
 @Component({

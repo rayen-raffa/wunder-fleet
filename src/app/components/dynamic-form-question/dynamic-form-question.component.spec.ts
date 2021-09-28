@@ -3,7 +3,7 @@ import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angula
 
 import { DynamicFormQuestionComponent } from './dynamic-form-question.component';
 import { MatInputModule } from '@angular/material/input';
-import { TextboxQuestion } from '../../utils/question-textbox';
+import { TextboxQuestion } from '../../models/question-textbox';
 
 describe('DynamicFormQuestionComponent', () => {
   let component: DynamicFormQuestionComponent;
