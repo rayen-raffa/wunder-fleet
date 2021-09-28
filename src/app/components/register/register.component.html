@@ -1,6 +1,6 @@
 <div>
   <form (ngSubmit)="onSubmit()" [formGroup]="form">
-    <div *ngFor="let question of questions" class="form-row">
+    <div *ngFor="let question of currentQuestions" class="form-row">
       <app-dynamic-form-question [question]="question" [form]="form"></app-dynamic-form-question>
     </div>
 
@@ -9,7 +9,7 @@
     </div>
   </form>
 
-  <div *ngIf="payLoad" class="form-row">
-    <strong>Saved the following values</strong><br />{{ payLoad }}
+  <div *ngIf="payloadStringyfied" class="form-row">
+    <strong>Saved the following values</strong><br />{{ payloadStringyfied }}
   </div>
 </div>
