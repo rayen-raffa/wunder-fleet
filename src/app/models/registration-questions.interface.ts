@@ -1,7 +1,7 @@
-import { TextboxQuestion } from "./question-textbox";
+import { QuestionBase } from "./question-base";
 
 export interface IRegistrationQuestions {
-    personalInfo: TextboxQuestion[],
-    address: TextboxQuestion[],
-    paymentInfo: TextboxQuestion[]
+    personalInfo: QuestionBase<string>[],
+    address: QuestionBase<string>[],
+    paymentInfo: QuestionBase<string>[]
 }

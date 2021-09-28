@@ -1,5 +1,3 @@
-import { act } from '@ngrx/effects';
-import { stat } from 'fs';
 import { RegisterActions, ERegisterActions } from '../actions/register.actions';
 
 import { initialRegisterState, IRegisterState } from '../state/register.state';
@@ -16,30 +14,30 @@ export const registerReducers = (
       };
     }
     case ERegisterActions.SubmitPersonalInformation: {
-        return {
-            ...state,
-            personalInfo: action.payload,
-            currentRegistrationStep: 'address',
-        }
+      return {
+        ...state,
+        personalInfo: action.payload,
+        currentRegistrationStep: 'address',
+      };
     }
     case ERegisterActions.SubmitAddress: {
-        return {
-            ...state,
-            address: action.payload,
-            currentRegistrationStep: 'paymentInfo' 
-        }
+      return {
+        ...state,
+        address: action.payload,
+        currentRegistrationStep: 'paymentInfo',
+      };
     }
     case ERegisterActions.RegisterSuccess: {
-        return {
-            ...state,
-            paymentInfo: {
-                ...state.paymentInfo,
-                paymentDataId: action.payload
-            },
-            currentRegistrationStep: 'registerSuccess'
-        }
+      return {
+        ...state,
+        paymentInfo: {
+          ...state.paymentInfo,
+          paymentDataId: action.payload,
+        },
+        currentRegistrationStep: 'registerSuccess',
+      };
     }
     default:
-        return state;
+      return state;
   }
 };

@@ -28,7 +28,7 @@ export class SubmitAddress implements Action {
   constructor(public payload: IAddress) {}
 }
 
-export class SubmitPaymentInformatioin implements Action {
+export class SubmitPaymentInformation implements Action {
   public readonly type = ERegisterActions.SubmitPaymentInformatioin;
   constructor(public payload: IPaymentInformation) {}
 }
@@ -42,5 +42,5 @@ export type RegisterActions =
   | StartRegister
   | SubmitPersonalInformation
   | SubmitAddress
-  | SubmitPaymentInformatioin
+  | SubmitPaymentInformation
   | RegisterSuccess;

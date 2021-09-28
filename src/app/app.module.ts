@@ -17,6 +17,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { appReducers } from './store/reducers/app.reducers';
 
 @NgModule({
   declarations: [
@@ -33,10 +34,10 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
     MatToolbarModule,
     MatButtonModule,
     MatInputModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot(appReducers),
     EffectsModule.forRoot([]),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    StoreRouterConnectingModule.forRoot()
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
+    StoreRouterConnectingModule.forRoot({stateKey: 'router'})
   ],
   providers: [],
   bootstrap: [AppComponent],
