@@ -6,43 +6,43 @@ import {
 import { IRegistrationQuestions } from 'src/app/models/registration-questions.interface';
 
 export interface IRegisterState {
-    currentRegistrationStep: string,
-    personalInfo: IPersonalInformation,
-    address: IAddress,
-    paymentInfo: IPaymentInformation,
-    regisrationQuestions: IRegistrationQuestions
+  currentRegistrationStep: string;
+  personalInfo: IPersonalInformation;
+  address: IAddress;
+  paymentInfo: IPaymentInformation;
+  regisrationQuestions: IRegistrationQuestions;
 }
 
 // TODO : create initial register questions
 export const initialPersonalInfoState: IPersonalInformation = {
-    firstName: '',
-    lastName: '',
-    telephone: ''
-}
+  firstName: '',
+  lastName: '',
+  telephone: '',
+};
 
 export const initialAddressState: IAddress = {
-    street: '',
-    houseNumber: '',
-    zipCode: '',
-    city: ''
-}
+  street: '',
+  houseNumber: '',
+  zipCode: '',
+  city: '',
+};
 
 export const initialPaymentInfo: IPaymentInformation = {
-    owner: '',
-    iban: '',
-    paymentDataId: ''
-}
+  owner: '',
+  iban: '',
+  paymentDataId: '',
+};
 
 export const initialRegistrationQuestionsState: IRegistrationQuestions = {
-    personalInfo: [],
-    address: [],
-    paymentInfo: []
-}
+  personalInfo: [],
+  address: [],
+  paymentInfo: [],
+};
 
 export const initialRegisterState: IRegisterState = {
-    currentRegistrationStep: 'Not Started',
-    personalInfo: initialPersonalInfoState,
-    address: initialAddressState,
-    paymentInfo: initialPaymentInfo,
-    regisrationQuestions: initialRegistrationQuestionsState
-}
+  currentRegistrationStep: 'personalInfo',
+  personalInfo: initialPersonalInfoState,
+  address: initialAddressState,
+  paymentInfo: initialPaymentInfo,
+  regisrationQuestions: initialRegistrationQuestionsState,
+};
