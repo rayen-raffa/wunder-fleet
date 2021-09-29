@@ -14,7 +14,7 @@ import {
 export class PaymentInfoService {
   savePaymentInfo(newCustomer: INewCutomer): Observable<any> {
     let paymentEndpoint =
-      'https://37f32cl571.execute-api.eu-central-1.amazonaws.com/default/wunderfleet-recruiting-backend-dev-save-payment-data';
+      '/default/wunderfleet-recruiting-backend-dev-save-payment-data';
     return this._http.post<ISavedCustomer>(paymentEndpoint, newCustomer);
   }
 
