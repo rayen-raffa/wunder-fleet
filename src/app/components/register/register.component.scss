@@ -1,0 +1,30 @@
+mat-card {
+  width: 80%;
+}
+
+.card-container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-content {
+    padding-top: 1%;
+}
+
+.submit-button {
+  margin-left: 95%;
+}
+
+.success-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newRegisterButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

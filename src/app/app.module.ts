@@ -11,6 +11,7 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
 import { DynamicFormQuestionComponent } from './components/dynamic-form-question/dynamic-form-question.component';
 import { RegisterComponent } from './components/register/register.component';
 import { StoreModule } from '@ngrx/store';
@@ -38,10 +39,11 @@ import { metaReducers } from './store/reducers/meta-reducers.reducers';
     MatToolbarModule,
     MatButtonModule,
     MatInputModule,
-    StoreModule.forRoot(appReducers, {metaReducers}),
+    MatCardModule,
+    StoreModule.forRoot(appReducers, { metaReducers }),
     EffectsModule.forRoot([RegistgerEffects]),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    StoreRouterConnectingModule.forRoot({stateKey: 'router'})
+    StoreRouterConnectingModule.forRoot({ stateKey: 'router' }),
   ],
   providers: [],
   bootstrap: [AppComponent],
