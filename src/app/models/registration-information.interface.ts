@@ -19,7 +19,7 @@ export interface IPaymentInformation {
 
 export interface INextOrPreviousStep {
     stepDirection: string,
-    submittedInfo?: IPersonalInformation | IAddress | IPaymentInformation
+    submittedInfo?: any
 }
 
 export interface IRegisrationInformation {

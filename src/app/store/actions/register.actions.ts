@@ -9,7 +9,7 @@ import {
 
 export enum ERegisterActions {
   StartRegister = '[Register] Start',
-  nextOrPreviousStep = '[Register] Move to next or previous step',
+  NextOrPreviousStep = '[Register] Move to next or previous step',
   SubmitPersonalInformation = '[Register] Submit Personal Information',
   SubmitAddress = '[Register] Submit Address',
   SubmitPaymentInformatioin = '[Register] Submit Payment Information',
@@ -21,7 +21,7 @@ export class StartRegister implements Action {
 }
 
 export class NextOrPreviousStep implements Action {
-  public readonly type = ERegisterActions.nextOrPreviousStep;
+  public readonly type = ERegisterActions.NextOrPreviousStep;
   constructor(public payload: INextOrPreviousStep) {}
 }
 
@@ -47,7 +47,7 @@ export class RegisterSuccess implements Action {
 
 export type RegisterActions =
   | StartRegister
-  | INextOrPreviousStep
+  | NextOrPreviousStep
   | SubmitPersonalInformation
   | SubmitAddress
   | SubmitPaymentInformation
