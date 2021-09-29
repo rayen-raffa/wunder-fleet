@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { select, Store } from '@ngrx/store';
-import { map, switchMap, withLatestFrom } from 'rxjs/operators';
+import { map, switchMap, switchMapTo, withLatestFrom } from 'rxjs/operators';
 
 import { IAppState } from '../state/app.state';
 import { INextOrPreviousStep } from 'src/app/models/registration-information.interface';
@@ -11,9 +11,12 @@ import {
   SubmitPersonalInformation,
   SubmitAddress,
   SubmitPaymentInformation,
+  RegisterSuccess
 } from '../actions/register.actions';
+import { PaymentInfoService } from 'src/app/services/payment-info/payment-info.service';
 import { selectCurrentRegisterStep } from '../selectors/register.selectors';
 import { of } from 'rxjs';
+import { ISavedCustomer } from 'src/app/models/registration-http.interface';
 
 @Injectable()
 export class RegistgerEffects {
@@ -34,8 +37,18 @@ export class RegistgerEffects {
     )
   );
 
+  savePaymentInfo$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(ERegisterActions.SubmitPaymentInformation),
+      map((action) => ({ customerId: 1, ...action.payload })),
+      switchMap((newUser) => this._paymentService.savePaymentInfo(newUser)),
+      switchMap((savedCustomer: ISavedCustomer) => of(new RegisterSuccess(savedCustomer.paymentDataId)))
+    )
+  );
+
   constructor(
     private actions$: Actions<RegisterActions>,
-    private _store: Store<IAppState>
+    private _store: Store<IAppState>,
+    private _paymentService: PaymentInfoService
   ) {}
 }

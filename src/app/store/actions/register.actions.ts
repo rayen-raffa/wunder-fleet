@@ -12,7 +12,7 @@ export enum ERegisterActions {
   NextOrPreviousStep = '[Register] Move to next or previous step',
   SubmitPersonalInformation = '[Register] Submit Personal Information',
   SubmitAddress = '[Register] Submit Address',
-  SubmitPaymentInformatioin = '[Register] Submit Payment Information',
+  SubmitPaymentInformation = '[Register] Submit Payment Information',
   RegisterSuccess = '[Register] Registration Successful',
 }
 
@@ -36,7 +36,7 @@ export class SubmitAddress implements Action {
 }
 
 export class SubmitPaymentInformation implements Action {
-  public readonly type = ERegisterActions.SubmitPaymentInformatioin;
+  public readonly type = ERegisterActions.SubmitPaymentInformation;
   constructor(public payload: IPaymentInformation) {}
 }
 

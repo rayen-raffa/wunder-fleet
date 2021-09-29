@@ -1,9 +1,9 @@
-export interface NewCutomer {
+export interface INewCutomer {
  customerId: number,
  iban: string,
  owner: string   
 }
 
-export interface SavedCustomer {
+export interface ISavedCustomer {
     paymentDataId: string
 }
