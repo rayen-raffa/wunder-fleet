@@ -10,5 +10,17 @@ mat-card {
 }
 
 .submit-button {
-    margin-left: 90%;
+  margin-left: 90%;
+}
+
+.success-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newRegisterButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

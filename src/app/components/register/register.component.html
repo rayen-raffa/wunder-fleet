@@ -11,7 +11,7 @@
           </div>
 
           <!-- <div class="form-row"> -->
-            <mat-card-actions>
+          <mat-card-actions>
             <button
               mat-flat-button
               color="accent"
@@ -21,18 +21,22 @@
             >
               Save
             </button>
-            </mat-card-actions>
+          </mat-card-actions>
           <!-- </div> -->
         </form>
-
-        <!-- <div *ngIf="payloadStringyfied" class="form-row">
-          <strong>Saved the following values</strong><br />{{
-            payloadStringyfied
-          }}
-        </div> -->
       </ng-container>
-      <ng-container *ngIf="(currentRegisterStep$ | async) == 'registerSuccess'">
-        <p>register success</p>
+      <ng-container *ngIf="(currentRegisterStep$ | async) == 'registerSuccess'" >
+        <mat-card-title style="text-align: center">
+          Registration successful!
+        </mat-card-title>
+        <mat-card-content style="text-align: center">
+          Payment ID: {{ (paymentInfo$ | async)?.paymentDataId }}
+        </mat-card-content>
+        <mat-card-actions>
+          <div class="newRegisterButton">
+            <button mat-flat-button color="accent" (click)="newRegister($event)">New Registration</button>
+          </div>
+        </mat-card-actions>
       </ng-container>
     </div>
   </mat-card>

@@ -9,8 +9,7 @@ export const registerReducers = (
   switch (action.type) {
     case ERegisterActions.StartRegister: {
       return {
-        ...state,
-        currentRegistrationStep: 'personalInfo',
+        ...initialRegisterState,
       };
     }
     case ERegisterActions.SubmitPersonalInformation: {
