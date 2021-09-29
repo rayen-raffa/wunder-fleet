@@ -27,6 +27,17 @@ export const registerReducers = (
         currentRegistrationStep: 'paymentInfo',
       };
     }
+    case ERegisterActions.SubmitPaymentInformation: {
+      return {
+        ...state,
+        paymentInfo: {
+          ...state.paymentInfo,
+          owner: action.payload.owner,
+          iban: action.payload.iban
+        },
+        currentRegistrationStep: 'paymentInfo',
+      };
+    }
     case ERegisterActions.RegisterSuccess: {
       return {
         ...state,

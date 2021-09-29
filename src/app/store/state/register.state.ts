@@ -90,7 +90,7 @@ export const initialRegistrationQuestionsState: IRegistrationQuestions = {
   ],
   paymentInfo: [
     new TextboxQuestion({
-      key: 'accountOwner',
+      key: 'owner',
       label: 'Account Owner',
       placeholder: 'Rayen RAFFA',
       required: true,

@@ -4,18 +4,25 @@ import {
   IPersonalInformation,
   IAddress,
   IPaymentInformation,
+  INextOrPreviousStep
 } from 'src/app/models/registration-information.interface';
 
 export enum ERegisterActions {
   StartRegister = '[Register] Start',
+  NextOrPreviousStep = '[Register] Move to next or previous step',
   SubmitPersonalInformation = '[Register] Submit Personal Information',
   SubmitAddress = '[Register] Submit Address',
-  SubmitPaymentInformatioin = '[Register] Submit Payment Information',
+  SubmitPaymentInformation = '[Register] Submit Payment Information',
   RegisterSuccess = '[Register] Registration Successful',
 }
 
 export class StartRegister implements Action {
   public readonly type = ERegisterActions.StartRegister;
+}
+
+export class NextOrPreviousStep implements Action {
+  public readonly type = ERegisterActions.NextOrPreviousStep;
+  constructor(public payload: INextOrPreviousStep) {}
 }
 
 export class SubmitPersonalInformation implements Action {
@@ -29,7 +36,7 @@ export class SubmitAddress implements Action {
 }
 
 export class SubmitPaymentInformation implements Action {
-  public readonly type = ERegisterActions.SubmitPaymentInformatioin;
+  public readonly type = ERegisterActions.SubmitPaymentInformation;
   constructor(public payload: IPaymentInformation) {}
 }
 
@@ -40,6 +47,7 @@ export class RegisterSuccess implements Action {
 
 export type RegisterActions =
   | StartRegister
+  | NextOrPreviousStep
   | SubmitPersonalInformation
   | SubmitAddress
   | SubmitPaymentInformation

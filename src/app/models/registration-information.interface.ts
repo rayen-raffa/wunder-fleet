@@ -17,6 +17,11 @@ export interface IPaymentInformation {
     paymentDataId: string
 }
 
+export interface INextOrPreviousStep {
+    stepDirection: string,
+    submittedInfo?: any
+}
+
 export interface IRegisrationInformation {
     personalInfo: IPersonalInformation,
     address: IAddress,
