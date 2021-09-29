@@ -20,6 +20,7 @@ import { environment } from '../environments/environment';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { appReducers } from './store/reducers/app.reducers';
 import { RegistgerEffects } from './store/effects/register.effects';
+import { metaReducers } from './store/reducers/meta-reducers.reducers';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { RegistgerEffects } from './store/effects/register.effects';
     MatToolbarModule,
     MatButtonModule,
     MatInputModule,
-    StoreModule.forRoot(appReducers),
+    StoreModule.forRoot(appReducers, {metaReducers}),
     EffectsModule.forRoot([RegistgerEffects]),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     StoreRouterConnectingModule.forRoot({stateKey: 'router'})
