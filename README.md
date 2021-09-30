@@ -3,30 +3,6 @@
 A multi-step registration form using Angular and NgRx for State Management. It offers data persistence on LocalStorage to enable the user to pick-up where he left off during the registration process.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
 
-## Screenshots
-### Personal information view
-![Submit personal information](./screenshots/view_personal_information.png?raw=true "Submit personal information")
-
-
-
-### Address view
-![Submit address](./screenshots/view_address.png?raw=true "Submit address")
-
-
-
-### Payment Information view
-![Submit payment information](./screenshots/view_payment_information.png?raw=true "Submit payment information")
-
-
-
-### Registration success view
-![Registration succes](./screenshots/view_registration_success.png?raw=true "Registration succes")
-
-
-
-### End-to-end registration scenario (GIF)
-![E2E Registration Scenario](./screenshots/e2e_registration_scenario.gif?raw=true)
-
 
 ## Possible code optimizations
 - Fetch form questions from an external source (e.g. back-end server) for more flexibility
@@ -74,3 +50,19 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `npm run test` to execute the unit tests via [Jest](https://jestjs.io/).
+
+## Infographics
+### End-to-end registration scenario (GIF)
+![E2E Registration Scenario](./screenshots/e2e_registration_scenario.gif?raw=true)
+
+### Personal information view
+![Submit personal information](./screenshots/view_personal_information.png?raw=true "Submit personal information")
+
+### Address view
+![Submit address](./screenshots/view_address.png?raw=true "Submit address")
+
+### Payment Information view
+![Submit payment information](./screenshots/view_payment_information.png?raw=true "Submit payment information")
+
+### Registration success view
+![Registration succes](./screenshots/view_registration_success.png?raw=true "Registration succes")
