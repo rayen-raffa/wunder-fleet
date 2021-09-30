@@ -12,8 +12,6 @@ app.use(express.urlencoded());
 app.use(express.static("./dist/wunder-fleet"));
 
 app.post("/default/*", (req, res) => {
-  console.log(req.url);
-  console.log(req.body);
   let payment_url = `${PAYMENT_SERVER}${req.url}`;
   axios
     .post(payment_url, { ...req.body })
