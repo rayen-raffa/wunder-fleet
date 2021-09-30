@@ -76,7 +76,6 @@ export class RegisterComponent implements OnInit {
   newRegister(event: Event) {
     event.preventDefault()
     event.stopPropagation()
-    console.log('new register')
     this._store.dispatch(new StartRegister())
     this.currentRegisterStep$.subscribe((step) => {
       switch (step) {

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "npx jest"
@@ -24,6 +24,8 @@
     "@ngrx/router-store": "^12.4.0",
     "@ngrx/store": "^12.4.0",
     "@ngrx/store-devtools": "^12.4.0",
+    "axios": "^0.21.4",
+    "express": "^4.17.1",
     "ngrx-store-localstorage": "^12.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
